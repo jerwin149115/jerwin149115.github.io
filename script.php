@@ -1,13 +1,9 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (isset($_POST["numberQueue"])) {
-        $numberQueue = $_POST["numberQueue"];
-        // Handle the received data, e.g., store it in a database.
-        echo "Data received successfully.";
-    } else {
-        echo "Number Queue parameter not found.";
-    }
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $data = $_POST['data']; // Retrieve data sent from Java
+    // Process the data (e.g., perform actions based on the data)
+    echo "Processed data: " . $data;
 } else {
-    echo "Invalid request method.";
+    echo "Invalid request";
 }
 ?>
