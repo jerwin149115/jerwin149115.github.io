@@ -1,8 +1,9 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $data = $_POST['data']; 
-    echo "Processed data: " . $data;
+if ($_SERVER['REQUEST' ] == 'POST') {
+    $data = $_POST['postData'] ?? '';
+    $response = ['message' => 'Data received sucessfully','data' => $data];
+    echo json_encode($response);
 } else {
-    echo "Invalid request";
+    echo 'no data received';
 }
 ?>
