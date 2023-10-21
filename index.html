@@ -5,17 +5,9 @@
         <title>Queue Status</title>
     </head>
     <body>
+        <div class = "container"></div>
         <div class = "header1"> <p>Window 1</p></div>
-        <div class = "box">
-            <?php
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                $data = $_POST['data'];
-                echo $data; 
-            } else {
-                echo "Invalid request";
-            }
-            ?>
-        </div>
+        <div class = "box"><p><? php $data; ?></p></div>
         <div class = "box2"></div>
         <div class = "header2"><p>Window 2</p></div>
         <div class = "box3"></div>
